@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace LibraryMS.Business
 {
-    internal interface IUnitOfWork
+    public interface IUnitOfWork
     {
     }
 }

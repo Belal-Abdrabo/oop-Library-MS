@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LibraryMS.Business\LibraryMS.Business.csproj" />
+    <ProjectReference Include="..\LibraryMS.Data\LibraryMS.Data.csproj" />
   </ItemGroup>
 
 </Project>
