@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryMS.Business.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace LibraryMS.Business
 {
     public class LibraryMember: User
     {
+        public LibraryCard? LibraryCard { get; set; }
     }
 }

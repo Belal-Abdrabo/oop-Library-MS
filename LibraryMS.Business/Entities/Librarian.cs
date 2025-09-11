@@ -8,5 +8,9 @@ namespace LibraryMS.Business
 {
     public class Librarian : User
     {
+        public string EmployeeId { get; set; }
+        public LibrarianRoles Role { get; set; }
+        public bool IsActive { get; set; }
     }
+    
 }
