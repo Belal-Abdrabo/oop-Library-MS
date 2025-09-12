@@ -15,13 +15,13 @@ namespace LibraryMS.Business.Entities
         public decimal FineBalance { get; set; } // for fines or fees
 
 
-        //public LibraryCard(Guid ownerId)
-        //{
-        //    Id = Guid.NewGuid();
-        //    OwnerId = ownerId;
-        //    IsActive = true;
-        //    IssuedDate = DateTime.Now;
-        //    FineBalance = 100.0m; // initial fine balance is zero
-        //}
+        public LibraryCard(Guid ownerId)
+        {
+            Id = Guid.NewGuid();
+            OwnerId = ownerId;
+            IsActive = true;
+            IssuedDate = DateTime.Now;
+            FineBalance = 0.0m; // initial fine balance is zero
+        }
     }
 }

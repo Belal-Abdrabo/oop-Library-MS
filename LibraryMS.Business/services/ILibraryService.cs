@@ -16,7 +16,7 @@ namespace LibraryMS.Business
         public void RemoveBook(Guid bookId);
         public List<Book> GetAllBooks();
         public List<Book> GetAllAvailableBooks();
-        public Book? GetBookById(Guid bookId);
+        public BookDetailsDto? GetBookById(Guid bookId);
 
         #endregion
         #region Circulation
@@ -26,7 +26,7 @@ namespace LibraryMS.Business
         public decimal Return(Guid libraryMemberId, Guid bookId, DateTime returnedOnTime);
         #endregion
         #region Queries 
-        public List<Loan> GetAllOpenLoansByMember(Guid libraryMemberId);
+        public List<BorrowedBookDTO> GetAllOpenLoansByMember(Guid libraryMemberId);
         #endregion
         #region Admin
         public void ActivateCard(Guid libraryMemberId);

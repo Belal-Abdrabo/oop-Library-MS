@@ -8,6 +8,7 @@ namespace LibraryMS.Business
 {
     public interface IFinePolicy
     {
+        decimal Fine { get;}
         public decimal CalculateFine(DateTime dueDate, DateTime returnedDate);
     }
 }

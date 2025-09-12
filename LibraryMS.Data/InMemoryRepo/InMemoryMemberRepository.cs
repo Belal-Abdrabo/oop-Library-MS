@@ -9,24 +9,45 @@ namespace LibraryMS.Data
 {
     public class InMemoryMemberRepository : IMemberRepository
     {
+        private List<LibraryMember> _members = new List<LibraryMember>()
+        {
+            new LibraryMember("John Doe"),
+            new LibraryMember("Jane Smith")
+        };
         public void AddMember(LibraryMember member)
         {
-            throw new NotImplementedException();
+            if(member == null)
+            {
+                throw new ArgumentNullException(nameof(member), "Member cannot be null");
+            }
+            _members.Add(member);
+        }
+
+        public void DeleteMember(Guid memberId)
+        {
+            var memberTodelete = _members.FirstOrDefault(m => m.Id == memberId);
+            memberTodelete.IsDeleted = true;
         }
 
         public List<LibraryMember> GetAllMembers()
         {
-            throw new NotImplementedException();
+            return _members.Where(m => !m.IsDeleted).ToList();
         }
 
         public LibraryMember GetMemberById(Guid memberId)
         {
-            throw new NotImplementedException();
+            return _members.FirstOrDefault(m => m.Id == memberId && !m.IsDeleted);
         }
 
         public void UpdateMember(LibraryMember member)
         {
-            throw new NotImplementedException();
+            var memberToUpdate = _members.FirstOrDefault(m => m.Id == member.Id);
+            if(memberToUpdate != null)
+            {
+                memberToUpdate.Name = member.Name;
+                memberToUpdate.IsDeleted = member.IsDeleted;
+            }
+
         }
     }
 }

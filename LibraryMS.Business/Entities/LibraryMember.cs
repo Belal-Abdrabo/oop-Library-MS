@@ -10,5 +10,14 @@ namespace LibraryMS.Business
     public class LibraryMember: User
     {
         public LibraryCard? LibraryCard { get; set; }
+        public bool IsDeleted { get; set; } = false;
+
+        public LibraryMember(string name)
+        {
+            Id = Guid.NewGuid();
+            Name = name;
+            LibraryCard = new LibraryCard(Id);
+        }
+
     }
 }

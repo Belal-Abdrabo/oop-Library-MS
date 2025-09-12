@@ -12,5 +12,6 @@ namespace LibraryMS.Business
         public List<LibraryMember> GetAllMembers();
         public void AddMember(LibraryMember member);
         public void UpdateMember(LibraryMember member);
+        public void DeleteMember(Guid memberId);
     }
 }

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryMS.Business.Entities
+namespace LibraryMS.Business
 {
-    internal class LibrarianRole
-    {
-    }
+        public enum LibrarianRoles
+        {
+            Admin,
+            Staff
+        }
 }

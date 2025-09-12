@@ -17,9 +17,9 @@ namespace LibraryMS.Business
 
         //(only if no open loans)
         public void RemoveBook(Guid bookId);
-
-        //for checking if a book is currently loaned out
-        public bool HasOpenLoans(Guid bookId);
+        public void DecrementAvailableCopies(Guid bookId);
+        public void IncrementAvailableCopies(Guid bookId);
+        Book GetBookByIsbn(string isbn);
 
     }
 }

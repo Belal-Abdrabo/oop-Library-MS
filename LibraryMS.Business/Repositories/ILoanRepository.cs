@@ -12,5 +12,8 @@ namespace LibraryMS.Business
         public List<Loan> GetAllOpenLoansByMember(Guid libraryMemberId);
         public void AddLoan(Loan loan);
         public void UpdateLoan(Loan loan);
+        //for checking if a book is currently loaned out
+        public bool HasOpenLoans(Guid bookId);
+        public int GetTotalLoansCountForBook(Guid bookId);
     }
 }
